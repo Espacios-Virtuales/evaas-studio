@@ -11,5 +11,5 @@ import { ToastsComponent } from './shared/components/toasts/toasts';
   styleUrl: './app.scss'
 })
 export class App {
-  protected readonly title = signal('evaas-interface');
+  protected readonly title = signal('evaas-studio');
 }

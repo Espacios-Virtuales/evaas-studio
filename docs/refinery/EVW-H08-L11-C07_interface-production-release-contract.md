@@ -6,7 +6,7 @@
 
 ## 1. Propósito, alcance y exclusiones
 
-Registrar la evidencia versionada disponible para planificar una futura liberación manual de `evaas-interface`. Se inspeccionaron archivos versionados y referencias Git. No se promovieron ramas, no se hizo push, no se ejecutó Vercel CLI y no se llamó a servicios ni endpoints productivos.
+Registrar la evidencia versionada disponible para planificar una futura liberación manual de `evaas-studio`. Se inspeccionaron archivos versionados y referencias Git. No se promovieron ramas, no se hizo push, no se ejecutó Vercel CLI y no se llamó a servicios ni endpoints productivos.
 
 Este documento no autoriza una liberación. No modifica código de aplicación, infraestructura ni configuración de despliegue.
 
@@ -22,7 +22,7 @@ La matriz operativa confirmada para C07 designa `develop` como integración y `m
 
 ## 3. Evidencia de configuración versionada
 
-- `README.md` documenta despliegue cloud estático en Vercel con `npx vercel --prod`, Node.js `20.x` y directorio de salida `dist/evaas-interface/browser`.
+- `README.md` documenta despliegue cloud estático en Vercel con `npx vercel --prod`, Node.js `20.x` y directorio de salida `dist/evaas-studio/browser`.
 - `package.json` define `npm run build` como `ng build --configuration=production`; `build:vercel` ejecuta la misma configuración. No existe script versionado de publicación. `start:vercel` ejecuta `vercel dev` para desarrollo.
 - `angular.json` sustituye el environment de desarrollo por `src/environments/environment.production.ts` en la configuración productiva. El archivo fija `production: true` y compila `apiUrl: 'https://api.evaas.lat'` dentro del bundle.
 - No hay variables públicas de build requeridas por la configuración versionada. La documentación menciona los posibles nombres `API_URL`, `NG_APP_API_URL`, `VITE_API_URL` y `EVAAS_API_URL` sólo como ejemplos de variables externas que podrían existir; el repositorio no confirma que estén configuradas. Registrar nombres no implica que sean necesarias.
@@ -37,7 +37,7 @@ La matriz operativa confirmada para C07 designa `develop` como integración y `m
 
 1. Confirmar con el operador el proyecto Vercel, dominio productivo de Interface, vínculo del repositorio, rama de producción configurada y si `main` despliega automáticamente.
 2. Confirmar que `origin/main` contiene únicamente el conjunto aprobado de cambios H08; revisar el diff, árbol limpio y `git diff --check`.
-3. Ejecutar en el checkout aprobado `npm test -- --watch=false` y aceptar sólo las dos fallas heredadas aprobadas (`ObjectCardComponent should create` y `ObjectsGridComponent should create`); ejecutar `npm run build` y revisar el artefacto `dist/evaas-interface/browser`.
+3. Ejecutar en el checkout aprobado `npm test -- --watch=false` y aceptar sólo las dos fallas heredadas aprobadas (`ObjectCardComponent should create` y `ObjectsGridComponent should create`); ejecutar `npm run build` y revisar el artefacto `dist/evaas-studio/browser`.
 4. Integrar los commits aprobados de `develop` a `main` mediante la revisión autorizada por el operador. Este contrato no ejecuta merges ni push.
 5. Publicar el build de ese mismo SHA en el proyecto Vercel confirmado. El README menciona `npx vercel --prod`, pero no se ejecutó: primero deben confirmarse el project link, el target y el comportamiento de `main` para evitar un segundo despliegue.
 6. Verificar la URL de Interface que entregue el operador y la disponibilidad de la API según el procedimiento autorizado. La respuesta de `/v3/api-docs` sólo comprueba respuesta HTTP de API; no sustituye readiness.
