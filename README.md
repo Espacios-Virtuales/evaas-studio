@@ -105,7 +105,7 @@ ng e2e      # opcional
 
 - **Local:** entorno Docker + Nginx (`docker compose up --build`)  
 - **Cloud:** despliegue estático en **Vercel** (`npx vercel --prod`)  
-- **Output Directory:** `dist/evaas-interface/browser`  
+- **Output Directory:** `dist/evaas-studio/browser`  
 - **Node.js Version:** 20.x  
 
 `vercel.json`:

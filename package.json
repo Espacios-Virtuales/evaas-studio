@@ -1,5 +1,5 @@
 {
-  "name": "evaas-interface",
+  "name": "evaas-studio",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -13,7 +13,7 @@
     "check:api:preflight": "curl -i -X OPTIONS https://api.evaas.lat/auth/login -H \"Origin: http://localhost:8181\" -H \"Access-Control-Request-Method: POST\" -H \"Access-Control-Request-Headers: content-type,authorization\" | grep -E \"HTTP/|Access-Control-Allow\""
   },
   "engines": {
-    "node": "20.x"
+    "node": "24.x"
   },
   "prettier": {
     "printWidth": 100,
