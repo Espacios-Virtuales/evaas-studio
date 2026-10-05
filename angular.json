@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "evaas-interface": {
+    "evaas-studio": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -69,10 +69,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "evaas-interface:build:production"
+              "buildTarget": "evaas-studio:build:production"
             },
             "development": {
-              "buildTarget": "evaas-interface:build:development"
+              "buildTarget": "evaas-studio:build:development"
             }
           },
           "defaultConfiguration": "development"

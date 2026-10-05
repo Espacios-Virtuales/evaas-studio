@@ -7,7 +7,7 @@ Fecha: 2026-09-29, America/Santiago.
 | Repositorio | Rama inicial | HEAD = origin/develop tras fetch y pull --ff-only |
 | --- | --- | --- |
 | CORE `ev-ecosystem-api` | `develop` | `21caf700d237d0799f1c6fbc6e6a496bcf1830c2` |
-| `evaas-interface` | `develop` | `1e9c5c7948c0f1de195b86ac0dfa86a2f7a44c8b` |
+| `evaas-studio` | `develop` | `1e9c5c7948c0f1de195b86ac0dfa86a2f7a44c8b` |
 
 Ambos árboles estaban limpios. La evidencia se registra en `codex/h08-l11-c01-governed-e2e-release-gate`, creada desde el SHA de Interface indicado. CORE permanece en `develop` sin cambios de fuente.
 
